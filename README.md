@@ -59,9 +59,45 @@ Compare the original, eroded, and dilated images.
 
 ## Developed By
 
-**Name:** ____________________________
+### Name: Kailash V
 
-**Register No:** ______________________
+### Register No: 212224240067
+```
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+img = np.zeros((400, 600), dtype=np.uint8)
+
+cv2.putText(img, "IMAGE PROCESSING", (80, 200),
+            cv2.FONT_HERSHEY_SIMPLEX, 1.5, 255, 3)
+
+kernel = np.ones((5, 5), np.uint8)
+
+erosion = cv2.erode(img, kernel, iterations=1)
+
+dilation = cv2.dilate(img, kernel, iterations=1)
+
+plt.figure(figsize=(12, 4))
+
+plt.subplot(1, 3, 1)
+plt.imshow(img, cmap="gray")
+plt.title("Original")
+plt.axis("off")
+
+plt.subplot(1, 3, 2)
+plt.imshow(erosion, cmap="gray")
+plt.title("Erosion")
+plt.axis("off")
+
+plt.subplot(1, 3, 3)
+plt.imshow(dilation, cmap="gray")
+plt.title("Dilation")
+plt.axis("off")
+
+plt.tight_layout()
+plt.show()
+```
 
 ## Output
 
@@ -69,6 +105,9 @@ Compare the original, eroded, and dilated images.
 
 - A text image containing characters is displayed.
 - The image serves as the input for morphological processing.
+<img width="404" height="291" alt="image" src="https://github.com/user-attachments/assets/89a34676-b9de-4341-a24b-703d37ef805f" />
+
+  
 
 ### Erosion
 
@@ -77,12 +116,20 @@ Compare the original, eroded, and dilated images.
 - The thickness of the characters is reduced.
 - Object boundaries shrink inward.
 
+<img width="400" height="292" alt="image" src="https://github.com/user-attachments/assets/9e68c3e4-1e57-41e9-bc09-44ae040b4aa8" />
+
+
+
 ### Dilation
 
 - Original image is displayed.
 - Dilated image is displayed.
 - The thickness of the characters increases.
 - Object boundaries expand outward.
+
+<img width="420" height="288" alt="image" src="https://github.com/user-attachments/assets/0b1b96ee-3531-4051-b6ad-01c2085db122" />
+
+
 
 ## Result
 
