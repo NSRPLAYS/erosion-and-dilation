@@ -59,9 +59,9 @@ Compare the original, eroded, and dilated images.
 
 ## Developed By
 
-### Name: Kailash V
+### Name: Naveen Sairam B
 
-### Register No: 212224240067
+### Register No: 212224240103
 ```
 import cv2
 import numpy as np
